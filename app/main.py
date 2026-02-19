@@ -32,6 +32,8 @@ class Distance:
             other_value = other.km
         elif isinstance(other, (int, float)):
             other_value = other
+        else:
+            return NotImplemented
         return self.km == other_value
 
     def __lt__(self, other: Distance | int | float) -> bool:
@@ -39,6 +41,8 @@ class Distance:
             other_value = other.km
         elif isinstance(other, (int, float)):
             other_value = other
+        else:
+            return NotImplemented
         return self.km < other_value
 
     def __gt__(self, other: Distance | int | float) -> bool:
@@ -46,6 +50,8 @@ class Distance:
             other_value = other.km
         elif isinstance(other, (int, float)):
             other_value = other
+        else:
+            return NotImplemented
         return self.km > other_value
 
     def __le__(self, other: Distance | int | float) -> bool:
@@ -53,6 +59,8 @@ class Distance:
             other_value = other.km
         elif isinstance(other, (int, float)):
             other_value = other
+        else:
+            return NotImplemented
         return self.km <= other_value
 
     def __ge__(self, other: Distance | int | float) -> bool:
@@ -60,4 +68,6 @@ class Distance:
             other_value = other.km
         elif isinstance(other, (int, float)):
             other_value = other
+        else:
+            return NotImplemented
         return self.km >= other_value
